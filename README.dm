@@ -1,5 +1,3 @@
-Как установить мой проект
-
 1. git clone __git.url_ site
 2. cd site
 3. bower i
