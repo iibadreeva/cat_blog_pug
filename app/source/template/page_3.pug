@@ -1,0 +1,87 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title cat
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="shorcat icon", href="favicon.ico?v", type="image/x-icon")
+		link(rel="icon", href="favicon.ico?v", type="image/x-icon")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300", rel="stylesheet")
+		link(rel="stylesheet", href="bower/normalize.css/normalize.css")
+		link(rel="stylesheet", href="css/main.css")
+
+	body
+		.conteiner
+			header.header
+				a(href="/", class="header__logo")
+					img(class="header__logo-img", width="200", src="image/logo.svg" alt="logo")
+				ul.social
+					li.social__item
+						a(href="https://vk.com/", class="social__link fa fa-vk", target="_blank")
+					li.social__item
+						a(href="https://vk.com/", class="social__link fa fa-twitter", target="_blank")
+					li.social__item
+						a(href="https://vk.com/", class="social__link fa fa-google-plus", target="_blank")
+					li.social__item
+						a(href="https://vk.com/", class="social__link fa fa-facebook", target="_blank")
+				.hamburger
+					.hamburger-box
+						.hamburger-inner
+				nav.nav--mobile
+					li.nav__item--mobile Новости на сайте
+					li.nav__item--mobile
+						a(class="nav__link--mobile" href="/page_1.html") Как успокоить кошку?
+					li.nav__item--mobile
+						a(class="nav__link--mobile" href="/page_2.html") Как отучить кошку орать?
+					li.nav__item--mobile
+						a(class="nav__link--mobile" href="/page_3.html") Как отучить кошку грызть?
+					li.nav__item--mobile
+						a(class="nav__link--mobile" href="/page_4.html") Как отучить кошку кусаться?
+					li.nav__item--mobile
+						a(class="nav__link--mobile" href="/page_5.html") Как отучить кошку драть?
+
+
+			main.main
+				aside.sidebar
+					nav.nav
+						li.nav__item Новости на сайте
+						li.nav__item
+							a(class="nav__link" href="/page_1.html") Как успокоить кошку?
+						li.nav__item
+							a(class="nav__link" href="/page_2.html") Как отучить кошку орать?
+						li.nav__item
+							a(class="nav__link" href="/page_3.html") Как отучить кошку грызть?
+						li.nav__item
+							a(class="nav__link" href="/page_4.html") Как отучить кошку кусаться?
+						li.nav__item
+							a(class="nav__link" href="/page_5.html") Как отучить кошку драть?
+				.content
+					article.page
+						h1 Как отучить кошку грызть?
+						p.page__text-big
+							img(class="page__image-small", width="50%", src="image/cat-eating-plastic-5.jpg", alt="cat eating plastic 5")
+							span Как отучить кошку грызть? Совсем непраздный вопрос, потому что полбеды, если кошка грызет мебель, гораздо хуже, если она предпочитает провода. Провод включенной телефонной зарядки может стоить коту жизни. Как спасти и кота, и провода, и мебель – читайте в этой статье.
+						.clear
+						h4 Почему кошка грызет провода?
+						p К сожалению, любовь кошек ко всему шнурообразному необъяснима. Вероятно, все подобные предметы кошки принимают за змей, на которых часто охотились их далекие предки, а может, и за мышиные хвосты.
+						p Кроме того, котята в принципе склонны все пробовать на зуб, и провода тут не исключение. Кстати, именно котята, особенно в период смены зубов могут погрызть мебель, ботинки, какие-то иные предметы, взрослые кошки, обычно, этого не делают.
+						p Взрослые кошки могут грызть коробки (еще одна необъяснимая страсть) и предметы, которые пахнут привлекательно (едой, кошачьей мятой, валерианой).
+						p Грызть предметы кошка может и от скуки, чтобы чем-то себя занять, помните об этом.
+						h4 Как отучить кошку грызть?
+						p • Спрячьте все провода\цветы\другие предметы, которые можно спрятать, и не пускайте кошку в комнаты, где заряжаются гаджеты.
+						p • Те провода\предметы, что нельзя спрятать, можно намазать острым соусом или сбрызнуть эфирным маслом цитрусов. Осторожнее, некоторые средства могут вызвать ожог или аллергию. Лучше использовать специальные антигрызины.
+						p • Когда вы выходите из дома – отключайте все электрические приборы, и оставляйте кошке игрушки.
+						p • Никогда не играйте с кошкой проводами, но чаще играйте специальными игрушками.
+						p • Купите специальные лакомства или веточки для тренировки кошки и очищения зубов от налета.
+						p • Внимательно следите за животным: отгрызенное и проглоченное, может привести к непроходимости кишечника.
+						p Отучить кошку от чего-либо довольно сложно, куда проще организовать ее жизнь так, чтобы грызть неположенное было нечего и некогда.
+
+			footer.footer
+				.footer__copy @ 2018  При использовании материалов сайта прямая активная ссылка на них обязательна
+				a(href="/going.html", class="footer__link") Войти
+	
+	script(src="bower/jquery/dist/jquery.js")
+	script(src="js/main.js")

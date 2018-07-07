@@ -1,21 +1,27 @@
-var gulp = require('gulp'),
-    browserSync = require('browser-sync');
+'use strict';
 
-gulp.task('server', function () {
-    browserSync({
-        port: 9000,
-        server: {
-            baseDir: 'app'
-        }
-    });
+global.$ = {
+    path: {
+        task: require('./gulp/paths/tasks.js')
+    },
+    gulp: require('gulp'),
+    csso: require('gulp-csso'),
+    del: require('del'),
+    gp: require('gulp-load-plugins')(),
+    browserSync: require('browser-sync').create()
+};
+$.path.task.forEach(function (taskPath) {
+    require(taskPath)();
 });
 
-gulp.task('watch', function () {
-    gulp.watch([
-        'app/*.html',
-        'app/js/**/*.js',
-        'app/css/**/*.css'
-    ]).on('change', browserSync.reload)
-});
-
-gulp.task('default', ['server', 'watch']);
+$.gulp.task('default', $.gulp.series(
+    'clean',
+    $.gulp.parallel(
+        'sass',
+        'pug'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
+))
