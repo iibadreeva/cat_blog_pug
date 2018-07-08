@@ -1,3 +1,5 @@
+include ./_mixins.pug
+
 doctype html
 html(lang='ru')
 	head
@@ -18,46 +20,16 @@ html(lang='ru')
 			header.header
 				a(href="/", class="header__logo")
 					img(class="header__logo-img", width="200", src="image/logo.svg" alt="logo")
-				ul.social
-					li.social__item
-						a(href="https://vk.com/", class="social__link fa fa-vk", target="_blank")
-					li.social__item
-						a(href="https://vk.com/", class="social__link fa fa-twitter", target="_blank")
-					li.social__item
-						a(href="https://vk.com/", class="social__link fa fa-google-plus", target="_blank")
-					li.social__item
-						a(href="https://vk.com/", class="social__link fa fa-facebook", target="_blank")
+				+social('social', [{className: "fa-vk", url: "https://vk.com/"}, {className: "fa-twitter", url: "https://twitter.com/"}, {className: "fa-google-plus", url: "https://plus.google.com/"}, {className: "fa-facebook", url: "https://www.facebook.com/"}])
 				.hamburger
 					.hamburger-box
 						.hamburger-inner
-				nav.nav--mobile
-					li.nav__item--mobile Новости на сайте
-					li.nav__item--mobile
-						a(class="nav__link--mobile" href="/page_1.html") Как успокоить кошку?
-					li.nav__item--mobile
-						a(class="nav__link--mobile" href="/page_2.html") Как отучить кошку орать?
-					li.nav__item--mobile
-						a(class="nav__link--mobile" href="/page_3.html") Как отучить кошку грызть?
-					li.nav__item--mobile
-						a(class="nav__link--mobile" href="/page_4.html") Как отучить кошку кусаться?
-					li.nav__item--mobile
-						a(class="nav__link--mobile" href="/page_5.html") Как отучить кошку драть?
+				+nav('nav--mobile', [{title:"Как успокоить кошку?",url: "/page_1.html"}, {title:"Как отучить кошку орать?",url: "/page_2.html"}, {title:"Как отучить кошку грызть?",url: "/page_3.html"}, {title:"Как отучить кошку кусаться?",url: "/page_4.html"}, {title:"Как отучить кошку драть?",url: "/page_5.html"}])
 
 
 			main.main
 				aside.sidebar
-					nav.nav
-						li.nav__item Новости на сайте
-						li.nav__item
-							a(class="nav__link" href="/page_1.html") Как успокоить кошку?
-						li.nav__item
-							a(class="nav__link" href="/page_2.html") Как отучить кошку орать?
-						li.nav__item
-							a(class="nav__link" href="/page_3.html") Как отучить кошку грызть?
-						li.nav__item
-							a(class="nav__link" href="/page_4.html") Как отучить кошку кусаться?
-						li.nav__item
-							a(class="nav__link" href="/page_5.html") Как отучить кошку драть?
+					+nav('nav', [{title:"Как успокоить кошку?",url: "/page_1.html"}, {title:"Как отучить кошку орать?",url: "/page_2.html"}, {title:"Как отучить кошку грызть?",url: "/page_3.html"}, {title:"Как отучить кошку кусаться?",url: "/page_4.html"}, {title:"Как отучить кошку драть?",url: "/page_5.html"}])
 
 				block content
 
