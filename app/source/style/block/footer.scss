@@ -1,0 +1,20 @@
+.footer {
+  background-color: #EEEEEE;
+  color: #9b9b9b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70px;
+  padding: 20px 2.2% 10px 2.2%;
+}
+.footer__link {
+  display: none;
+  height: 40px;
+  line-height: 2.2;
+  color: #21afec;
+  transition: color 0.5s ease-in;
+  text-decoration: none;
+}
+.footer__link:hover {
+  color: #1a8cbc;
+}

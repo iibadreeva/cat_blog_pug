@@ -2,8 +2,9 @@
 
 module.exports = function () {
     $.gulp.task('sass', function () {
-        return $.gulp.src('./app/source/style/app.scss')
+        return $.gulp.src('./app/source/style/main.scss')
             .pipe($.gp.sourcemaps.init())
+            .pipe($.gp.sassGlob())
             .pipe($.gp.sass())
             .on('error', $.gp.notify.onError({
                 title: 'Style'
@@ -17,7 +18,8 @@ module.exports = function () {
                     'opera 12.1'
                 ]
             }))
+            .pipe($.gp.csso())
             .pipe($.gp.sourcemaps.write())
-            .pipe($.gulp.dest('./app/build/assets/css'));
+            .pipe($.gulp.dest('./app/css'));
     });
 };
