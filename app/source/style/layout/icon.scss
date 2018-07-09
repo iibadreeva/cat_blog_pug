@@ -1,0 +1,42 @@
+.social__link:hover:before {
+  color: #3585C3;
+}
+
+.fa-vk:before {
+  color: hsl(199, 85%, 36%);
+}
+
+.fa-twitter:before {
+  color: hsl(195, 100%, 60%);
+}
+
+.fa-google-plus:before {
+  color: hsl(7, 71%, 55%);
+}
+
+.fa-facebook:before {
+  color: hsl(221, 44%, 41%);
+}
+
+.fa-vk:hover:before,
+.fa-twitter:hover:before,
+.fa-facebook:hover:before,
+.fa-google-plus:hover:before {
+  color: hsl(0, 0%, 100%);
+}
+
+.fa-vk:hover:before {
+  background-color: hsl(199, 85%, 36%);
+}
+
+.fa-twitter:hover:before {
+  background-color: hsl(195, 100%, 60%);
+}
+
+.fa-google-plus:hover:before {
+  background-color: hsl(7, 71%, 55%);
+}
+
+.fa-facebook:hover:before {
+  background-color: hsl(221, 44%, 41%);
+}

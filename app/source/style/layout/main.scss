@@ -16,6 +16,10 @@
 
 .sidebar {
   flex-basis: 200px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .content {
@@ -27,6 +31,3 @@
   clear: both;
   height: 15px;
 }
-
-
-

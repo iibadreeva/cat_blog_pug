@@ -15,6 +15,10 @@
   color: inherit;
   border: 0;
   background-color: transparent;
+
+  @include tablets {
+    display: inline-block;
+  }
 }
 .hamburger.active {
   position: fixed;
@@ -42,27 +46,32 @@
   display: block;
   content: "";
 }
+
 .hamburger-inner:before {
   top: -10px;
   left: 0;
   transition: transform .125s cubic-bezier(.6,.04,.98,.335),top .05s linear .125s,left .125s ease-in .175s;
 }
+
 .hamburger-inner:after {
   top: 10px;
   right: 0;
   transition: transform .125s cubic-bezier(.6,.04,.98,.335),top .05s linear .125s,right .125s ease-in .175s;
 }
+
 .hamburger.active .hamburger-inner {
   transition-delay: 0s;
   transition-timing-function: ease-out;
   background-color: transparent;
 }
+
 .hamburger.active .hamburger-inner:before {
   top: -80px;
   left: -80px;
   transition: left .125s ease-out,top .05s linear .125s,transform .125s cubic-bezier(.075,.82,.165,1) .175s;
   transform: translate3d(80px,80px,0) rotate(45deg);
 }
+
 .hamburger.active .hamburger-inner:after {
   top: -80px;
   right: -80px;

@@ -1,44 +1,18 @@
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: 570px) {//480
+    @content;
+  }
+}
+
 @import "layout/setups";
 @import "layout/main";
 
 @import "block/**/*.scss";
 
-
-
-
-@media only screen and (max-width: 650px) {
-  .header {
-    overflow: hidden;
-  }
-  .sidebar {
-    display: none;
-  }
-  .page__image-small {
-    width: 100%;
-  }
-  .social {
-    padding-right: 50px;
-  }
-  .hamburger {
-    display: inline-block;
-  }
-  .nav--mobile {
-    display: flex;
-  }
-}
-
-@media only screen and (max-width: 570px) {
-  .header {
-    flex-direction: column;
-    padding: 0 2rem;
-  }
-  .social {
-    align-self: center;
-    padding-top: 5px;
-  }
-  .social__item {
-    border-radius: 25px;
-    padding: 1px;
-    color: #fff;
-  }
-}
+@import "layout/icon";
